@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>To Do!</title>
 </head>
 <body>
     <div id="sidebar">
         <button id="new-task">New task</button>
+        <div id="tasks">
+            <button>
+                <div>
+                    Sample
+                    <p>
+                        No due date
+                    </p>
+                </div>
+                <i data-lucide="trash-2"></i>
+            </button>
+        </div>
     </div>
     <div id="container">
         <div id="content">
-            <input type="date" id="date">
+            <div id="header">
+                <input type="date" id="date">
+                <div id="header-buttons">
+                    <button id="delete">
+                        <i data-lucide="trash-2"></i>
+                    </button>
+                    <button id="save">
+                        Save
+                    </button>
+                </div>
+            </div>
             <div id="priority">
                 <label for="important">Important</label>
                 <input type="checkbox" id="important">
@@ -19,6 +42,7 @@
             
             <input type="text" id="task-title" placeholder="Title">
             <textarea id="description" placeholder="Description"></textarea>
+            <textarea id="notes" placeholder="Notes"></textarea>
         </div>
     </div>
     
