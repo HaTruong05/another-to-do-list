@@ -6,8 +6,9 @@
 }
 
 #content {
-    width: 65vw;
-    padding: 3rem 0;
+  flex-grow: 1;          
+  min-width: 300px;       
+  padding: 3rem 4rem; 
 }
 
 textarea, input {
@@ -60,12 +61,14 @@ body, #container, #priority, #header {
 
 input[type="checkbox"] {
     width: auto;
+    cursor: pointer;
 }
 
 #date {
     font-size: 1rem;
     color: #aaa;
     width: auto;
+    cursor: pointer;
 }
 
 #priority {
@@ -79,12 +82,12 @@ input[type="checkbox"] {
 #sidebar {
     width: 25vw;
     height: 100vh;
-    min-width: 300px;
+    min-width: 230px;
     background-color: hsl(353, 96%, 82%);
     padding: 1rem;
 }
 
-#sidebar button {
+button {
     background-color: hsl(353, 96%, 82%);
     font-size: 1rem;
     font-weight: 500;
@@ -98,38 +101,40 @@ input[type="checkbox"] {
     font-family: 'Inter', system-ui, sans-serif;
 }
 
-#tasks p {
+.task p {
     font-size: 0.65rem;
     padding-left: 1px;
     font-style: italic;
 }
 
-#tasks button {
+.project-name {
     display: flex;
     justify-content: space-between;
+    align-items: end;
+    padding: 0.6rem 1rem;
+
 }
 
-#tasks svg {
-    margin-top: 1px;
+.project-name svg {
     border-radius: 0.5rem;
-    padding: 2px 6px 1px;
+    padding: 2px 0 1px;
     transition: background-color 0.2s ease;
-    width: 34px;
-    height: 28px;
+    width: 26px;
+    height: 24px;
 }
 
-#tasks svg:hover,
-#tasks svg:focus-visible {
+.project-name svg:hover,
+.project-name svg:focus-visible {
     background-color: hsl(353, 96%, 82%);
 }
 
-#tasks svg:active {
+.project-name svg:active {
     background-color: hsl(353, 96%, 76%);
 }
 
-#sidebar button:hover,
-#sidebar button:focus,
-#sidebar button:active {
+button:hover,
+button:focus,
+button:active {
     background-color: hsl(353, 96%, 88%);
 }
 
@@ -147,6 +152,8 @@ input[type="checkbox"] {
 }
 
 #delete {
+  width: auto;
+  min-width: 50px;
   background-color: #e2e2e2;
   border: none;
   padding: 0.25rem 0.8rem 0.05rem;
@@ -171,6 +178,8 @@ input[type="checkbox"] {
     border-radius: 0.75rem;
     padding: 6.9px 1rem;
     transition: background-color 0.2s ease;
+    width: auto;
+    min-width: 70px;
 }
 
 #save:hover,
