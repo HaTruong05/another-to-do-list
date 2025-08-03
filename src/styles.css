@@ -32,7 +32,7 @@ textarea {
     resize: none;
 }
 
-#task-title {
+#title {
     font-size: 4rem;
     margin-bottom: 0.5rem;
 }
@@ -59,7 +59,7 @@ body, #container, #priority, #header {
     display: flex;
 }
 
-input[type="checkbox"] {
+#important {
     width: auto;
     cursor: pointer;
 }
@@ -68,7 +68,10 @@ input[type="checkbox"] {
     font-size: 1rem;
     color: #aaa;
     width: auto;
-    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
 }
 
 #priority {
@@ -80,24 +83,27 @@ input[type="checkbox"] {
 }
 
 #sidebar {
-    width: 25vw;
+    width: 22vw;
     height: 100vh;
     min-width: 230px;
     background-color: hsl(353, 96%, 82%);
     padding: 1rem;
 }
 
-button {
+#new-task {
+    padding: 0.75rem 1rem; 
+}
+
+#new-task, .task button {
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
     background-color: hsl(353, 96%, 82%);
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
-    padding: 0.75rem 1rem;
     border: none;
     border-radius: 0.75rem;
     width: 100%;
     text-align: left;
-    cursor: pointer;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
     font-family: 'Inter', system-ui, sans-serif;
 }
 
@@ -112,36 +118,61 @@ button {
 }
 
 .task button {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
 }
 
-.project-name {
+.project {
+    margin: 1.5rem 0 0.25rem;
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding: 0.5rem 1rem 0.7rem;
+    padding: 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
-.project-name svg {
-    border-radius: 0.5rem;
-    padding: 2px 0 1px;
+.project button,
+#delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project button {
     transition: background-color 0.2s ease;
-    width: 26px;
-    height: 24px;
-}
-
-.project-name svg:hover,
-.project-name svg:focus-visible {
     background-color: hsl(353, 96%, 82%);
+    border: none;
+    cursor: pointer;
+    padding-bottom: 1px;
 }
 
-.project-name svg:active {
-    background-color: hsl(353, 96%, 76%);
+
+.project button svg {
+    stroke: #2b2b2b;
+    transition: stroke 0.2s ease;
 }
 
-button:hover,
-button:focus,
-button:active {
+.project button:hover svg,
+.project button:focus-visible svg {
+    stroke: hsl(0, 70%, 50%);
+}
+
+.project button:active svg {
+    stroke: hsl(0, 70%, 40%);
+}
+
+.project button svg {
+    height: 16px;  
+    width: 16px; 
+}
+
+.task button:hover,
+.task button:focus,
+.task button:active,
+#new-task:hover,
+#new-task:focus,
+#new-task:active {
     background-color: hsl(353, 96%, 88%);
 }
 
@@ -159,15 +190,15 @@ button:active {
 }
 
 #delete {
-  width: auto;
-  min-width: 50px;
-  background-color: #e2e2e2;
-  border: none;
-  padding: 0.25rem 0.8rem 0.05rem;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
+    width: auto;
+    min-width: 50px;
+    background-color: #e2e2e2;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
 
 #delete:hover,
 #delete:focus-visible {
@@ -183,7 +214,7 @@ button:active {
     border: none;
     cursor: pointer;
     border-radius: 0.75rem;
-    padding: 6.9px 1rem;
+    padding: 7.2px 1rem;
     transition: background-color 0.2s ease;
     width: auto;
     min-width: 70px;
@@ -198,8 +229,9 @@ button:active {
   background-color: hsl(353, 96%, 70%);
 }
 
-svg {
+#delete svg {
     height: 20px;
+    width: 20px;
 }
 
 #header-buttons {
