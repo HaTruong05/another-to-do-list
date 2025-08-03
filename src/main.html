@@ -9,12 +9,19 @@
 </head>
 <body>
     <div id="sidebar">
-        <button id="new-task">New task</button>
+        <button id="new-project">New project</button>
         <div>
-            <button class="project-name">
+            <div class="project">
                 Sample
-                <i data-lucide="trash-2"></i>
-            </button>
+                <div class="project-actions">
+                    <button>
+                        <i data-lucide="folder-minus" class="remove-project"></i>
+                    </button>
+                    <button>
+                        <i data-lucide="circle-plus" class="add-task"></i>
+                    </button>
+                </div>
+            </div>
             <div class="task">
                 <button>
                     Sample task
@@ -34,7 +41,7 @@
                         <i data-lucide="trash-2"></i>
                     </button>
                     <button id="save">
-                        Save
+                        <i data-lucide="save"></i>
                     </button>
                 </div>
             </div>
@@ -43,7 +50,7 @@
                 <input type="checkbox" id="important">
             </div>
             
-            <input type="text" id="task-title" placeholder="Title">
+            <input type="text" id="title" placeholder="Title">
             <textarea id="description" placeholder="Description"></textarea>
             <textarea id="notes" placeholder="Notes"></textarea>
         </div>
