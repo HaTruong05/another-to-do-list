@@ -12,4 +12,17 @@ lucide.createIcons();
 
 // })
 
-// function 
+// Buttons
+const save = document.getElementById('save');
+const del = document.getElementById('delete');
+
+// Info fields
+const date = document.getElementById('date');
+const important = document.getElementById('important');
+const title = document.getElementById('title');
+const description = document.getElementById('description');
+const notes = document.getElementById('notes');
+
+function saveCurrentNote(uuid) {
+    
+}
