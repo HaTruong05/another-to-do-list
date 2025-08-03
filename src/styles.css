@@ -52,7 +52,6 @@ textarea {
 
 #container {
     justify-content: center;
-    width: 75vw;
 }
 
 body, #container, #priority, #header {
@@ -83,9 +82,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #sidebar {
-    width: 22vw;
+    flex-grow: 1;
     height: 100vh;
-    min-width: 230px;
+    min-width: 350px;
     background-color: hsl(353, 96%, 82%);
     padding: 1rem;
 }
