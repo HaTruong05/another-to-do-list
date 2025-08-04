@@ -17,7 +17,6 @@ textarea, input {
     outline: none;
     padding: 0.75rem;
     border-radius: 0.5rem;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 textarea::placeholder, input::placeholder {
@@ -125,10 +124,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+}
+
+.project input {
     font-size: 1.25rem;
+    width: 100%;
     font-weight: 500;
     font-family: 'Inter', system-ui, sans-serif;
+    padding: 0 1rem;
+    border-radius: 0;
+    background-color: hsl(353, 96%, 82%);
 }
 
 .project button,
